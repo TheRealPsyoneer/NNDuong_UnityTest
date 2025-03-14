@@ -1,13 +1,13 @@
 # NNDuong_UnityTest
 
-1. Scripts that I have worked on:
+# Scripts that I have worked on:
    
-- New scripts added:
+1. New scripts added:
 + BottomTrayControl
 + EventSO
 + UIPanelWin
   
-- Modified scripts:
+2. Modified scripts:
 + Board
 + BoardController
 + Cell
@@ -20,12 +20,12 @@
 + UIMainManager
 + UIPanelMain
 
-2. Explaination of task solving process:
+# Explaination of task solving process:
    
-- Task 1: Re-skin
+1. Task 1: Re-skin
   Replace sprite in SpriteRenderer of itemNormal prefabs with fish sprites in Textures folder.
   
-- Task 2: Change the gameplay
+2. Task 2: Change the gameplay
   First I remove some features of the old gameplay such as Show Hint, Swap Item, etc...
   I create EventSO script for easy creation of event channel, make game object communicate with ease when some game event happpened.
 + Move items to bottom cells and Bottom area contains 5 cells:
@@ -45,14 +45,17 @@
 + Autolose button, eah action has 0.5s delay
   Same implementation as Autoplay button. The logic is that, the game only take one instance of NormalItem type in the Dictionary to the tray, then it moved on to the next NormalItem type. This will fill the tray with 5 different items, result in lose.
 
-- Task 3: Improve the gameplay
+3. Task 3: Improve the gameplay
 + Add animation:
   I use the Move and Explode animation function which is already implemented in Cell and Item scripts.
 + Add Time Attack Mode:
   I modified GameManager, UIPanelMain, BottomTrayControl scripts to let the game enter Time Attack Mode state.
-  Player don't lose when bottom cells are filled: I added a bool check to BottomTrayControl script, so the player won't lose when the tray are full in Time Attack Mode.
-  Item can return to initial position on the board: I modified Item script, added a lastPosition Cell to it, which store the cell when the item is Instantiated in the board. If the item is clicked while on the tray, it will return to this lastPosition Cell.
-  Player Lose if fail to clear within 1 minute: I modified LevelTime script, so player will result in lose when (m_time <= -1f).
++ Player don't lose when bottom cells are filled:
+  I added a bool check to BottomTrayControl script, so the player won't lose when the tray are full in Time Attack Mode.
++ Item can return to initial position on the board:
+  I modified Item script, added a lastPosition Cell to it, which store the cell when the item is Instantiated in the board. If the item is clicked while on the tray, it will return to this lastPosition Cell.
++ Player Lose if fail to clear within 1 minute:
+  I modified LevelTime script, so player will result in lose when (m_time <= -1f).
 
 
 
