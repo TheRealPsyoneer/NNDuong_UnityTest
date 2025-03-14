@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8578068027574883013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8578068027574883014}
+  - component: {fileID: 8578068027574883015}
+  - component: {fileID: 8578068027574883012}
+  m_Layer: 0
+  m_Name: BottomTray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8578068027574883014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578068027574883013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: -4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!156049354 &8578068027574883015
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578068027574883013}
+  m_Enabled: 1
+  m_CellSize: {x: 1, y: 1, z: 1}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
+--- !u!114 &8578068027574883012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578068027574883013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e1bded86c6a424b817115ee75c1ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trayCapacity: 5
+  itemClickMoveToTrayEvent: {fileID: 11400000, guid: 3a3ad8c96242af845bf8124a6f8b8415,
+    type: 2}
+  levelLoseEvent: {fileID: 11400000, guid: c7fcf9ab129440043911c0738f4cc5c2, type: 2}
+  levelWinEvent: {fileID: 11400000, guid: 3a16ce97befbb6742bc6922babb909e9, type: 2}
+  autoEvent: {fileID: 11400000, guid: 47604f35f2c99ff4285de14824648e8c, type: 2}
+  endAutoEvent: {fileID: 11400000, guid: b7d5edc3243838446a342e55cf622582, type: 2}
+  currentQuantity: 0
+  gameSettings: {fileID: 11400000, guid: 598718f9e5a14af49b65162e962b0ca1, type: 2}
+  isAutoplay: 0
+  isAutolose: 0
